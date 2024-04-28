@@ -26,6 +26,10 @@ function evaluate() {
             main = (parseFloat(history) * parseFloat(main)).toString();
             break;
         case '/':
+            if (main === "0") {
+                alert("NO, you dont!");
+                return;
+            }
             main = (parseFloat(history) / parseFloat(main)).toString();
             break;
         case '%':
