@@ -1,0 +1,85 @@
+:root {
+    --text: #ecdcc8;
+    --text-hl: #ec9c3b;
+
+    --surface-0: #111;
+    --surface-1: #222;
+    --surface-2: #282828;
+    --surface-3: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--surface-1);
+    color: var(--text);
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    padding: 2em;
+    background-color: var(--surface-2);
+    flex: 0 0 30em; /* rearranging items when wrap happens is a headache best to avoid*/
+    border: 0.05em solid var(--text);
+    border-radius: 1em;
+    gap: 1em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    padding: 1em 2em;
+    background-color: var(--text);
+    color: var(--surface-0);
+    font-weight: bold;
+}
+
+#main {
+    text-align: right;
+    font-size: 2em;
+}
+
+#controls {
+    padding: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.button {
+    flex: 1 0 2.5em;
+    height: 2em;
+    font-size: 2em;
+
+    color: var(--text);
+    background-color: var(--surface-3);
+    border: 0.05em solid var(--text);
+    border-radius: 0.2em;
+}
+
+.button.wide {
+    flex: 10 0 2.5em;
+}
+
+.button:hover {
+    color: var(--text-hl);
+    border-color: var(--text-hl);
+}
+
+.button:focus {
+    outline: 0.05em solid var(--text);
+}
+
+.button:hover:focus {
+    outline-color: var(--text-hl);
+}
