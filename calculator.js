@@ -12,7 +12,7 @@ function updateDisplay(){
 }
 
 function evaluate() {
-    if (history === ""){
+    if (history === "" || main === ""){
         return;
     }
     switch (pendingOperation){
@@ -36,6 +36,7 @@ function evaluate() {
             main = (parseFloat(history) % parseFloat(main)).toString();
             break;
     }
+    main = parseFloat(main).toFixed(2).toString();
 }
 
 function editMain(arg) {
