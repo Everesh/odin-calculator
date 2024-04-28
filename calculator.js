@@ -12,6 +12,9 @@ function updateDisplay(){
 }
 
 function evaluate() {
+    if (history === ""){
+        return;
+    }
     switch (pendingOperation){
         case '+':
             main = (parseFloat(history) + parseFloat(main)).toString();
